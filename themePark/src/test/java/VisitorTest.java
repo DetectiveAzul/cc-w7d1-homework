@@ -8,7 +8,7 @@ public class VisitorTest {
     private Visitor visitor;
     @Before
     public void before() {
-        visitor = new Visitor( "Jaime", 29, 1.70, 35);
+        visitor = new Visitor( "Jaime", 29, 1.70, 35, false);
     }
     @Test
     public void hasName() {

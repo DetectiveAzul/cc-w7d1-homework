@@ -19,7 +19,7 @@ public class ThemeParkTest {
     @Before
     public void before() {
         themePark = new ThemePark("Codeclan Park");
-        rollercoaster = new Rollercoaster("The Jaguar", 8, 8);
+        rollercoaster = new Rollercoaster("The Jaguar", 8, 10, 8);
         playground = new Playground("Pirate Park", 10);
         park = new Park("Jurassic Park", 4);
         dodgems = new Dodgems("Wacky Races", 6, 10);

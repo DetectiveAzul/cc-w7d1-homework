@@ -16,7 +16,11 @@ public class Dodgems extends Attraction implements IChargeable {
     }
 
     public double priceFor(Visitor visitor) {
-        if (visitor.getAge() <= 12) return (price/2);
-        return price;
+        if (getNumberOfVisitors() < 2) {
+            return 0;
+        } else {
+            if (visitor.getAge() <= 12) return (price / 2);
+            return price;
+        }
     }
 }

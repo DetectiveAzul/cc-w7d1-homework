@@ -16,8 +16,8 @@ public class PlaygroundTest {
     @Before
     public void before() {
         playground = new Playground("Pirate Park", 10);
-        visitor00 = new Visitor("Jaime", 29, 1.70, 35);
-        visitor01 = new Visitor("John", 14, 1.45, 10);
+        visitor00 = new Visitor("Jaime", 29, 1.70, 35, false);
+        visitor01 = new Visitor("John", 14, 1.45, 10,false);
     }
     @Test
     public void hasName() {

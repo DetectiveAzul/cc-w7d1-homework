@@ -15,11 +15,11 @@ public class RollercoasterTest {
 
     @Before
     public void before() {
-        rollercoaster = new Rollercoaster("The Jaguar", 8, 8);
-        visitor00 = new Visitor("Jaime", 29, 1.70, 35);
-        visitor01 = new Visitor("John", 14, 1.40, 10);
-        visitor02 = new Visitor("John", 10, 1.80, 10);
-        visitor03 = new Visitor("John", 12,1.80, 10);
+        rollercoaster = new Rollercoaster("The Jaguar", 8, 10, 8);
+        visitor00 = new Visitor("Jaime", 29, 1.70, 35, false);
+        visitor01 = new Visitor("John", 14, 1.40, 10, false);
+        visitor02 = new Visitor("John", 10, 1.80, 10, false);
+        visitor03 = new Visitor("John", 12,1.80, 10, true);
     }
     @Test
     public void hasName() {
@@ -43,14 +43,18 @@ public class RollercoasterTest {
     }
     @Test
     public void hasPrice() {
-        assertEquals(8, rollercoaster.getPrice(), 0);
+        assertEquals(18, rollercoaster.getPrice(), 0);
     }
     @Test
     public void normalPrice() {
-        assertEquals(8, rollercoaster.priceFor(visitor00),0);
+        assertEquals(18, rollercoaster.priceFor(visitor00),0);
     }
     @Test
     public void halfPrice() {
-        assertEquals(4, rollercoaster.priceFor(visitor03), 0);
+        assertEquals(9, rollercoaster.priceFor(visitor03), 0);
+    }
+    @Test
+    public void notAllowedHadMeal() {
+        assertFalse(rollercoaster.isAllowedTo(visitor03));
     }
 }

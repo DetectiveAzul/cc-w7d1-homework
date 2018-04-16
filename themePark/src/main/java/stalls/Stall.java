@@ -24,7 +24,7 @@ public abstract class Stall implements IEnjoyable, IChargeable {
     }
 
     public int getFunRating() {
-        return funRating;
+        return funRating + 2;
     }
 
     public String getOwnerName() {
